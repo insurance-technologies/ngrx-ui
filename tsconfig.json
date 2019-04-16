@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngrx-ui-lib": [
+        "dist/ngrx-ui-lib"
+      ],
+      "ngrx-ui-lib/*": [
+        "dist/ngrx-ui-lib/*"
+      ]
+    }
   }
 }

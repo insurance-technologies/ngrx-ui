@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "ngrx-ui-lib": {
+      "root": "projects/ngrx-ui-lib",
+      "sourceRoot": "projects/ngrx-ui-lib/src",
+      "projectType": "library",
+      "prefix": "rxui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngrx-ui-lib/tsconfig.lib.json",
+            "project": "projects/ngrx-ui-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngrx-ui-lib/src/test.ts",
+            "tsConfig": "projects/ngrx-ui-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ngrx-ui-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngrx-ui-lib/tsconfig.lib.json",
+              "projects/ngrx-ui-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngrx-ui"
