@@ -18,5 +18,19 @@ export interface DialogConfig
 export interface DialogConfigCollection
 {
     default: DialogConfig;
+    xs?: DialogConfig;
+    sm?: DialogConfig;
+    md?: DialogConfig;
+    lg?: DialogConfig;
+    xl?: DialogConfig;
+    ltsm?: DialogConfig;
+    ltmd?: DialogConfig;
+    ltlg?: DialogConfig;
+    ltxl?: DialogConfig;
+    gtxs?: DialogConfig;
+    gtsm?: DialogConfig;
+    gtmd?: DialogConfig;
+    gtlg?: DialogConfig;
+
     [configName: string]: DialogConfig;
 }
