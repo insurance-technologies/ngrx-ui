@@ -1,5 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { Dialog } from '../dialog/dialog-decorator';
+import { DialogManager } from '../dialog/dialog-manager';
 
+@Dialog({
+  default:{
+    width: '720px'
+  },
+  xs:{
+    width: '230px'
+  },  
+  md:{
+    
+  },  
+})
 @Component({
   selector: 'rxui-ngrx-ui-lib',
   template: `
@@ -11,9 +24,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgrxUiLibComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialogManager: DialogManager) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+
+    let result = await this.dialogManager.openDialog(NgrxUiLibComponent, {});
+
   }
 
 }

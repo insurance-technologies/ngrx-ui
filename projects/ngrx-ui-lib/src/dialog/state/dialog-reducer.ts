@@ -1,7 +1,7 @@
-import { DialogConfig } from '../dialog-configuration';
 import { DialogActions } from './dialog-actions';
 import * as Actions from './dialog-actions';
 import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { MatDialogConfig } from '@angular/material';
 
 export interface State {   
    isDialogOpen: boolean;
@@ -12,7 +12,7 @@ export interface State {
 
 export interface DialogInfo{
     dialogName: string;
-    config: DialogConfig;
+    config: MatDialogConfig;
     dialogUniqueId: string;
 }
 

@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { DialogConfig } from '../dialog-configuration';
+import { MatDialogConfig } from '@angular/material';
 
 export enum ActionTypes
 {    
@@ -12,7 +12,7 @@ export enum ActionTypes
 export class OpenDialog implements Action
 {
    readonly type = ActionTypes.OpenDialog;   
-   constructor( public name: string, public uniqueId: string, public configuration: DialogConfig ){}
+   constructor( public name: string, public uniqueId: string, public configuration: MatDialogConfig ){}
 }
 
 export class CloseDialogWithResult implements Action

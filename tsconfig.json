@@ -24,6 +24,12 @@
       ],
       "ngrx-ui-lib/*": [
         "dist/ngrx-ui-lib/*"
+      ],
+      "ngrx-ui-material-dialog": [
+        "dist/ngrx-ui-material-dialog"
+      ],
+      "ngrx-ui-material-dialog/*": [
+        "dist/ngrx-ui-material-dialog/*"
       ]
     }
   }
